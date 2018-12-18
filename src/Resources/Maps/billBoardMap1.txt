@@ -1,0 +1,210 @@
+# (Lines that start witE '#' are comments)
+# The tiles are:
+#   (Space) Empty tile
+#   A..Z    Tiles A through Z
+K    L     K    I      I                       L  K   I    J   L   K
+  I     L    J      K    B                   B   I   L   J   K  I L
+L   J      I     L                                 J   I   K L  L  I
+      L       K       J  B                   B K  J   I  K I  L   K
+  I      J       I   I                              K  L  I  J  K  L
+     I     K   J   K     B    C          C   B I  K  I   J  K  L I 
+L  K  K  L   L         J                         L  K  I  J L  L I J
+               K  J  I                         J  I  L  K  J  I K
+J    L       I      L                           K  I  K  L  J  I K
+   K     I        K    L                       J L  I  K  J L  I  K
+ L    K        L    I                            K  L  J  L  I  K L
+   I    L  J     J     K                       I
+I    J       K I   K      I    L  J    K   L  J  L   K   I   J  I  
+  L      K          I   J    I      L     K    L    I J   J I  K   L
+ K  L  I  J       K   L    J    L      I    J    I   L   K   L   I
+      K   L      I    L   K   J  C   C     I    L    K  I   K     L
+  J   L     I  L    K    L   L           K    L   I   J   I  L  K
+L   I    K
+  I   J     J  K      L   I     L      K     I    J    I    L    K
+    J     I   K   I  K          I   J    J   L  J  I    J   K   I
+  K  I  L  J     K   I   J   L    K  K   L  I  K   I    L    I    J
+L      K     I    J    K   L     J  J L    K    I    L   J   K   
+   I      K    L    I   L   J  I   K    I   J     K    K   J  I  L
+	 K  I    L      K     I     L     K    K   I     J   L  I     K
+	                                                     
+	                                                       
+	
+	
+	
+	
+	                                                             
+	
+	
+	             
+				 
+				 
+				 
+				 
+				 
+		
+		
+		
+		
+		  
+		       Q                     Q                     Q
+	Q                     Q                     Q 
+     	   
+		
+	
+	
+	
+	
+	
+	
+	
+     
+	
+	
+	                                                H
+	
+	
+	
+	
+	
+	              G
+	                      
+	                       
+	
+	
+	
+	
+	
+	
+	
+	
+     
+	
+	
+	
+	
+	
+	
+	
+	           N                     N                     N
+	                                                     
+	N                     N                     N           
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	        F
+	
+	
+	
+	
+     
+	
+	
+	
+	
+	
+	
+	
+	           O                     O                     O
+	                                                     
+	O                     O                     O           
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	 
+	
+	                                             E
+	
+	
+	
+	
+     
+	 
+	
+	
+	
+	
+	
+	
+	           P                     P                     P
+	                                                     
+	P                     P                     P           
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+     
+	
+	
+	           M                     M                     M
+	                                                     
+	M                     M                     M           
+	
+	
+	
+	         
+	
+	       
+		  	
+	                       
+	
+	                      
+	
+	
+	
+	
+	        
+                                  I      J  K   LK  K I  J  K    K
+                              L       K     J  I  IJ L ILJ IJ K I J
+                                    L     J   L JIJ   JK L J L J  K
+                                I     I  K   I L  I  L  L   JI K LJ
+                                  K      I    LI K ILI K  KJ LI L I
+                              L        K     IJ K LJ  K L LIJ K IL 
+                                    I     J    IJK  LK K  K  L JK  
+                             K  I L  J K I L IJ K I   K LJI J KK LJ
+                              K KL K  L K K IK I K IL J   K  J JK I
+                                              JL JI K  ILJ IJ  JIL 
+                             KLI I KIKI KIKL KL JKJ  KJ I  JKL J KI
+                             LJ IKJ LK L J I I LK   I K  JI  KI I  
+                             ILJKJ KJ I K JK KL JK K KJ IL JI K L I
+                              ILJ I KL JIL I I L  IJ L I JI J KK L 
+                             KLI IKJ K I LIK KL JKJ L J I KJ L J KI

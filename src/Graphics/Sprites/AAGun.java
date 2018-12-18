@@ -1,0 +1,264 @@
+package Graphics.Sprites;
+
+import Graphics.Character;
+import Graphics.Animation;
+import Graphics.Shapes.Circle;
+import Math.Lookup;
+import Math.Calculate;
+import java.awt.*;
+import java.awt.geom.AffineTransform;
+import java.util.Timer;
+import java.util.TimerTask;
+
+/**
+ *  Code created by: Brett Bearden & Giovanni Cardenas
+ *
+ *  Copyright (c) 2016, Nuclear Deterrence
+ */
+public class AAGun extends Character {
+
+    // Images
+    private Image bodyImage;
+    private Image turretImage;
+    private static Image originalBodyImg;
+    private static Image originalTurretImage;
+
+    // Turret Rotating determines when to play the SFX
+    private boolean turretRotating;
+
+    // Angle
+    private int angle;
+    private double cosA;
+    private double sinA;
+
+    // Projectiles
+    private int ammo;
+    private boolean ammoIsEmpty;
+    private Timer refillAmmo;
+    private int reloadTime;
+
+    // Turret Rotate Speed
+    private static final int rotateSpeed = 1;
+
+    // Helicopter Images
+    public AAGun(String name, Image[] images, Animation dying, Object collision, int type, int offset) {
+
+        super(name, null, dying, collision, offset, images[1].getWidth(null),
+                images[1].getHeight(null), type);
+
+        setAnim(null);
+
+        this.originalBodyImg = images[1];
+        this.bodyImage = images[1];
+        this.originalTurretImage = images[0];
+        this.turretImage = images[0];
+
+        this.turretRotating = false;
+
+        this.angle = 0;
+        cosA = Lookup.cos[angle];
+        sinA = Lookup.sin[angle];
+
+        // Set Cos and Sin for Sprite Class
+        super.setCosA(cosA);
+        super.setSinA(sinA);
+
+        this.ammo = 2;
+        this.ammoIsEmpty = false;
+        this.refillAmmo = new Timer();
+        this.reloadTime = 700;
+    }
+
+    // Update
+    public void update(long elapsedTime) { super.update(elapsedTime); }
+
+    // Draw
+    public void draw(GraphicsConfiguration gc, Graphics2D g, int offsetX, int offsetY, boolean colBoundVisible) {
+
+        // DRAW SPRITE
+        // Adjust Sprite Position with Map Offset
+        int spriteX = Math.round(getX()) + offsetX;
+        int SpriteY = Math.round(getY()) + offsetY;
+
+        // Draw Static Images if Alive
+        if(super.isAlive()) {
+
+            // Draw Body Image
+            g.drawImage(bodyImage, spriteX, SpriteY, null);
+
+            // Draw Rotor Image
+            g.drawImage(turretImage, spriteX, SpriteY, null);
+        }
+
+        // Draw Animation if Dying!
+        if(super.isDying() && (super.anim != null)) {
+
+            // Rotate animation image
+            Image newAnim = getRotatedImage(gc, super.getAnimImage(), angle);
+
+            // Draw Death Animation
+            g.drawImage(newAnim, spriteX, SpriteY, null);
+        }
+
+        // DRAW COLLISION MODEL
+        // Draw Collision Boundary if Visible
+        if(colBoundVisible) {
+
+            // Get Collision Model
+            Circle collision = (Circle) getCollisionPoly();
+
+            // Set the X/Y of Circle 1
+            collision.setX(spriteX + getWidth()/2);
+            collision.setY(SpriteY + getHeight()/2 + getOffset());
+
+            // Draw the Circles
+            collision.draw(g, cosA, sinA);
+        }
+    }
+
+    // MOVEMENT
+    // Get Angle
+    public int getAngle() { return this.angle; }
+
+    // Get CosA
+    public double getCosA() { return this.cosA; }
+
+    // Get SinA
+    public double getSinA() { return this.sinA; }
+
+    // Turn Towards
+    public void turnTowards(GraphicsConfiguration gc, float x1, float y1, float x2, float y2) {
+
+        // Rotate this Sprite's Turret towards another Sprite
+        double d = (x2 - x1) * sinA - (y2 - y1) * cosA;
+
+        // The values in (d < -30) and (d > 30) sets a smaller range
+        // to turn towards and reduces the amount of rotations needed.
+        if(d < -75) {
+
+            rotate(gc, -rotateSpeed);
+            turretRotating = true;
+        } else if(d > 75) {
+
+            rotate(gc,  rotateSpeed);
+            turretRotating = true;
+        } else {
+
+            turretRotating = false;
+        }
+    }
+
+    // Get Turret Rotating
+    public boolean isTurretRotating() { return this.turretRotating; }
+
+    // IMAGE
+    // Get this Sprite's Image Width
+    public int getWidth() { return this.bodyImage.getWidth(null); }
+
+    // Get this Sprite's Image Height
+    public int getHeight() { return this.bodyImage.getHeight(null); }
+
+    // Rotate the Turret Image
+    public void rotate(GraphicsConfiguration gc, int degree) {
+
+        // Calculate the new Angle Change
+        angle = Calculate.angle(angle, degree);
+
+        // Lookup the new Angle
+        cosA = Lookup.cos[angle];
+        sinA = Lookup.sin[angle];
+
+        // If the Angle is 0 then just copy the original image
+        if(angle == 0) turretImage = originalTurretImage;
+        else {
+
+            // Any angle other than 0 requires a new image to be generated by
+            // Calculating the rotation transform from the original image.
+            turretImage = getRotatedImage(gc, originalTurretImage, angle);
+        }
+    }
+
+    // Get Rotated Image
+    private Image getRotatedImage(GraphicsConfiguration gc, Image image, int angle) {
+
+        // Set up the transform
+        AffineTransform transform = new AffineTransform();
+        transform.translate(image.getWidth(null) / 2.0, image.getHeight(null) / 2.0 );
+
+        transform.rotate(Math.toRadians(angle));
+
+        // Put origin back to upper left corner
+        transform.translate(-image.getWidth(null) / 2.0, -image.getHeight(null) / 2.0);
+
+        // Create a transparent (not translucent) image
+        Image newImage = gc.createCompatibleImage(image.getWidth(null), image.getHeight(null), Transparency.BITMASK);
+
+        // Draw the transformed image
+        Graphics2D g = (Graphics2D)newImage.getGraphics();
+        AffineTransform origTransform = g.getTransform();
+        g.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+        g.setRenderingHint(RenderingHints.KEY_ANTIALIASING,RenderingHints.VALUE_ANTIALIAS_ON);
+        g.drawImage(image, transform, null);
+        g.setTransform(origTransform);
+        g.dispose();
+
+        return newImage;
+    }
+
+
+    // PROJECTILES
+    // Is in Range
+    public boolean isInRange(float x1, float y1, float x2, float y2, int r1, int r2) {
+
+        // Calculate Angle between Sprite's
+        double d = Calculate.turnDistance(x1, y1, x2, y2, super.getCosA(), super.getSinA());
+
+        // If the Sprite is Aimed in a range at the other Sprite then Check Distance
+        if(d >= -350 && d < 350) {
+
+            d = Calculate.distanceTo(x1, y1, x2, y2);
+
+            // If the distance is in range then return true
+            return d < (r1 + r2) * (r1 + r2);
+        }
+
+        // Not in Range Return False
+        return false;
+    }
+
+    // Decrease Ammunition
+    public void decreaseAmmo() {
+
+        ammo -= 2;
+
+        if(ammo <= 0) {
+
+            ammo = 0;
+            ammoIsEmpty = true;
+        }
+
+        // This will cancel the current task. If there is no active task, nothing happens.
+        this.refillAmmo.cancel();
+        this.refillAmmo = new Timer();
+
+        // After timer ends Refill Ammunition
+        TimerTask action = new TimerTask() { public void run() { refillAmmo(); } };
+
+        // Start Timer with Delay amount
+        this.refillAmmo.schedule(action, 1000);
+    }
+
+    // Ammunition is Empty
+    public boolean ammoIsEmpty() { return ammoIsEmpty; }
+
+    // Refill Ammunition
+    private void refillAmmo() {
+
+        ammo = 2;
+        ammoIsEmpty = false;
+    }
+
+    // Set Reload Time
+    public void setReloadTime(int time) { this.reloadTime = time; }
+
+} // End of Class/

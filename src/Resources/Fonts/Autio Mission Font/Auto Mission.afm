@@ -1,0 +1,111 @@
+StartFontMetrics 2.0
+Comment Copyright Derived from Automation Shaded on page 3 of Dan Solo's Special Effects and Topical Alphabets.
+
+- Toto
+  Kyusi, Pilipinas
+  toto@ispx.com.ph
+  September 22, 2011
+Comment Panose 2 0 0 0 0 0 0 0 0 0
+FullName Auto Mission
+FontName AutoMission
+FamilyName Auto Mission
+Weight Regular
+Notice Toto 2011 [toto@ispx.com.ph + to22to@gmail.com] For personal use only.
+Version 1.000
+IsFixedPitch false
+ItalicAngle 0.00
+FontBBox 0 -109 1277 730
+Ascender 700
+Descender -250
+XHeight 700
+CapHeight 700
+UnderlinePosition -100
+UnderlineThickness 50
+EncodingScheme AdobeStandardEncoding
+StartCharMetrics 84
+C 32 ; WX 350 ; N space ; B 0 0 0 0 ;
+C 33 ; WX 220 ; N exclam ; B 41 -10 181 712 ;
+C 34 ; WX 323 ; N quotedbl ; B 63 501 259 696 ;
+C 36 ; WX 545 ; N dollar ; B 48 -66 508 730 ;
+C 37 ; WX 1049 ; N percent ; B 44 -35 1007 712 ;
+C 38 ; WX 648 ; N ampersand ; B 65 0 634 700 ;
+C 39 ; WX 199 ; N quotesingle ; B 58 501 138 696 ;
+C 40 ; WX 328 ; N parenleft ; B 66 0 312 700 ;
+C 41 ; WX 330 ; N parenright ; B 16 0 262 700 ;
+C 44 ; WX 196 ; N comma ; B 57 -89 137 96 ;
+C 45 ; WX 470 ; N hyphen ; B 61 278 409 350 ;
+C 46 ; WX 192 ; N period ; B 46 0 146 100 ;
+C 47 ; WX 592 ; N slash ; B 66 0 526 700 ;
+C 48 ; WX 665 ; N zero ; B 65 0 599 700 ;
+C 49 ; WX 411 ; N one ; B 51 0 382 700 ;
+C 50 ; WX 455 ; N two ; B 53 0 406 700 ;
+C 51 ; WX 490 ; N three ; B 47 0 442 700 ;
+C 52 ; WX 523 ; N four ; B 37 0 503 700 ;
+C 53 ; WX 507 ; N five ; B 52 0 451 700 ;
+C 54 ; WX 565 ; N six ; B 66 0 526 700 ;
+C 55 ; WX 441 ; N seven ; B 31 0 406 700 ;
+C 56 ; WX 633 ; N eight ; B 54 0 579 700 ;
+C 57 ; WX 555 ; N nine ; B 23 0 488 700 ;
+C 58 ; WX 202 ; N colon ; B 51 0 151 314 ;
+C 59 ; WX 192 ; N semicolon ; B 39 -109 139 299 ;
+C 63 ; WX 451 ; N question ; B 29 -11 419 700 ;
+C 65 ; WX 591 ; N A ; B 25 0 535 700 ;
+C 66 ; WX 567 ; N B ; B 65 0 515 700 ;
+C 67 ; WX 552 ; N C ; B 65 0 515 700 ;
+C 68 ; WX 595 ; N D ; B 65 0 553 700 ;
+C 69 ; WX 466 ; N E ; B 46 0 422 700 ;
+C 70 ; WX 451 ; N F ; B 65 0 435 700 ;
+C 71 ; WX 586 ; N G ; B 65 0 525 700 ;
+C 72 ; WX 568 ; N H ; B 66 0 501 700 ;
+C 73 ; WX 331 ; N I ; B 26 0 291 700 ;
+C 74 ; WX 499 ; N J ; B 12 0 432 700 ;
+C 75 ; WX 583 ; N K ; B 66 0 521 700 ;
+C 76 ; WX 350 ; N L ; B 13 0 333 699 ;
+C 77 ; WX 783 ; N M ; B 32 0 717 700 ;
+C 78 ; WX 623 ; N N ; B 66 0 556 700 ;
+C 79 ; WX 540 ; N O ; B 65 0 474 700 ;
+C 80 ; WX 534 ; N P ; B 65 0 508 700 ;
+C 81 ; WX 613 ; N Q ; B 65 0 572 700 ;
+C 82 ; WX 566 ; N R ; B 65 0 515 700 ;
+C 83 ; WX 552 ; N S ; B 64 0 487 700 ;
+C 84 ; WX 524 ; N T ; B 27 0 497 700 ;
+C 85 ; WX 496 ; N U ; B 38 0 458 700 ;
+C 86 ; WX 520 ; N V ; B 65 0 495 700 ;
+C 87 ; WX 813 ; N W ; B 66 0 780 700 ;
+C 88 ; WX 594 ; N X ; B 61 0 534 700 ;
+C 89 ; WX 532 ; N Y ; B 45 0 490 700 ;
+C 90 ; WX 568 ; N Z ; B 47 0 507 700 ;
+C 91 ; WX 328 ; N bracketleft ; B 66 0 312 700 ;
+C 93 ; WX 330 ; N bracketright ; B 16 0 262 700 ;
+C 97 ; WX 588 ; N a ; B 22 0 522 700 ;
+C 98 ; WX 567 ; N b ; B 65 0 515 700 ;
+C 99 ; WX 552 ; N c ; B 65 0 515 700 ;
+C 100 ; WX 592 ; N d ; B 66 0 526 700 ;
+C 101 ; WX 508 ; N e ; B 65 0 470 700 ;
+C 102 ; WX 451 ; N f ; B 65 0 435 700 ;
+C 103 ; WX 586 ; N g ; B 65 0 525 700 ;
+C 104 ; WX 568 ; N h ; B 66 0 501 700 ;
+C 105 ; WX 331 ; N i ; B 26 0 291 700 ;
+C 106 ; WX 499 ; N j ; B 12 0 432 700 ;
+C 107 ; WX 583 ; N k ; B 66 0 521 700 ;
+C 108 ; WX 423 ; N l ; B 65 0 415 699 ;
+C 109 ; WX 783 ; N m ; B 32 0 717 700 ;
+C 110 ; WX 623 ; N n ; B 66 0 556 700 ;
+C 111 ; WX 541 ; N o ; B 65 0 475 700 ;
+C 112 ; WX 534 ; N p ; B 65 0 508 700 ;
+C 113 ; WX 613 ; N q ; B 65 0 572 700 ;
+C 114 ; WX 566 ; N r ; B 65 0 515 700 ;
+C 115 ; WX 560 ; N s ; B 55 0 515 700 ;
+C 116 ; WX 503 ; N t ; B 25 0 475 700 ;
+C 117 ; WX 553 ; N u ; B 66 0 486 700 ;
+C 118 ; WX 595 ; N v ; B 53 0 572 700 ;
+C 119 ; WX 793 ; N w ; B 66 0 760 700 ;
+C 120 ; WX 594 ; N x ; B 61 0 534 700 ;
+C 121 ; WX 543 ; N y ; B 25 0 499 700 ;
+C 122 ; WX 568 ; N z ; B 47 0 507 700 ;
+C 162 ; WX 540 ; N cent ; B 59 -66 509 730 ;
+C -1 ; WX 0 ; N .null ; B 0 0 0 0 ;
+C -1 ; WX 350 ; N CR ; B 0 0 0 0 ;
+C -1 ; WX 1315 ; N K22 ; B 89 1 1277 697 ;
+EndCharMetrics
+EndFontMetrics

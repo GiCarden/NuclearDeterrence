@@ -1,0 +1,210 @@
+# (Lines that start witE '#' are comments)
+# The tiles are:
+#   (Space) Empty tile
+#   A..Z    Tiles A through Z
+                          J      F J E       F
+                                         
+
+
+
+                                                                   
+                                   O
+
+
+
+                                 P   P
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	      
+	
+	
+	                                                       
+	                                                     
+	                                                       
+	
+	
+	
+	
+	                                                             
+	
+	
+	             
+				 
+				 
+				 
+				 
+				 
+		
+		
+		
+		
+		  
+		                                                    
+	                                              
+     	   
+		
+	
+	
+	
+	
+	
+	
+	
+     
+	
+	
+	                                                 
+	
+	
+	
+	
+	
+	               
+	                      
+	                       
+	
+	
+	
+	
+	
+	
+	
+	
+     
+	
+	
+	
+	
+	
+	
+	
+	                                                        
+	                                                     
+	                                                        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	         
+	
+	
+	
+	
+     
+	
+	
+	
+	
+	
+	
+	
+	                                                        
+	                                                     
+	                                                        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	 
+	
+	                                              
+	
+	
+	
+	
+     
+	 
+	
+	
+	
+	
+	
+	
+	                                                        
+	                                                     
+	                                                        
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	                    L
+             
+	                                  K
+	                       
+	                                                        
+	                                                     
+	                                                        
+	
+	
+	
+	         
+	
+	       
+		  	
+	                       
+	
+	                      
+	
+	
+	
+	
+	 
+	
+                           A
+ I I      D   D           C   
+ I                      
+ I B B            H    M
+ I B B              
+ I B B      N     M    H
+ I B B                     D
+ I B B                  
+ I J                       
+ I F                             
+ I F  G G G G G            D    
+ I E  G G G G G F E J E E 
+ I I  G G G G G E J F J J E
+  J E F  J  F  F  I I I I I                                        
